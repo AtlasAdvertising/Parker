@@ -1,0 +1,583 @@
+/* home page */
+#heroWrapper {
+	.banner-container {
+		min-height: 220px;
+	}
+	.caption.sft.tp-caption.start {
+		width: 100%;
+		left: 0 !important;
+		text-align: center;
+		color: #ffffff;
+		text-transform: uppercase;
+		.heroTitle {
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: 5px;
+			@include breakpoint(small) {
+				font-size: 30px;
+			}
+		}
+			.heroSubTitle {
+				font-family: "Rockwell W01", serif;
+				font-size: 34px;
+				line-height: 32px;
+				position: relative;
+				top: 20px;
+				white-space: normal;
+				@include breakpoint(small) {
+					top: 30px;
+					font-size: 73px;
+					line-height: 75px;
+				}
+				@include breakpoint(medium) {
+					line-height: 34px;
+				}
+			}
+			.heroLink a {
+				@include yellow-button;
+				position: relative;
+  			top: 50px;
+  			font-size: 11px;
+  			padding: 10px 14px;
+  			@include breakpoint(small) {
+					font-size: 18px;
+					top: 75px;
+					padding: 10px 20px;
+  			}
+			}
+			.heroLink a:hover {
+				@include yellow-button-hover;
+			}
+		}	
+		.tp-rightarrow.tparrows.default {
+			top: 45% !important;
+		}
+}
+
+.teaser-wrapper {
+  margin-top: 25px;
+  z-index: 100;
+  @include breakpoint(medium) {
+  	margin-top: -201px;
+  }
+  @include breakpoint(large) {
+  	margin-top: -244px;
+  }
+  .top-wrapper {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    @include breakpoint(medium) {
+    	padding-bottom: 0;
+    	background: rgba(255,255,255, 0.8);
+    }
+    .title {
+	    font-family: "Roboto", sans-serif;
+	    font-size: 18px;
+	    line-height: 40px;
+	    text-transform: uppercase;
+	    color: #000000;
+	    letter-spacing: 6px;
+		}
+		.image {
+			img {
+				width: 90%;
+				@include breakpoint(medium) {
+					width: 260px;
+				}
+				@include breakpoint(large) {
+					width: auto;
+				}
+			}
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+	.top-wrapper:hover {
+		background: rgba(255, 255, 255, 1);
+	}
+	.description {
+		padding: 15px 20px;
+		font-family: "Roboto", sans-serif;
+		font-size: 14px;
+		line-height: 1.5;
+		color: $dark-grey;
+		position: relative;
+		@include breakpoint(small) {
+			height: 250px;
+		}
+		@include breakpoint(medium) {
+			height: 185px;
+		}
+		@include breakpoint(large) {
+			height: 165px;
+		}
+		a {
+			@include button(#666666,#ffffff,$black);
+			font-size: 14px;
+			@include breakpoint(small) {
+				position: absolute;
+				bottom: 0%;
+			}
+			@include breakpoint(medium) {
+				font-size: 18px;
+			}
+		}
+		a:hover {
+			@include button-hover($yellow,$yellow);
+		}
+	}	
+}
+
+.connect-wrapper {
+	background: $purple-blue;
+	padding: 40px 0;
+	margin: 50px 0;
+	.text {
+		color: #ffffff;
+		font-family: "Roboto Condensed", sans-serif;
+		font-weight: 700;
+		font-size: 28px;
+	}
+	.button a{
+		@include button($darker-purple,$darker-purple,#ffffff);
+		float: right;
+	}
+	.button a:hover {
+		@include button-hover(#ffffff,$darker-purple);
+		color: $darker-purple;
+	}
+}
+
+.section-header	{
+	width: 100%;
+	text-align: center;
+	font-family: "Rockwell W01", serif;
+	font-size: 34px;
+	text-transform: uppercase;
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+.success-wrapper {
+	-webkit-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.15);
+	margin-bottom: 5px;
+	.inner-wrapper {
+    margin: 30px 0;
+    overflow: hidden;
+		.successStoryContent {
+	    float: left;
+	    width: 100%;
+	    height: 163px;
+	    position: relative;
+	    text-align: center;
+	    margin-right: 2.75%;
+	    margin-bottom: 20px;
+	    @include breakpoint(small) {
+	    	width: 47.25%;
+	    }
+	    @include breakpoint(large) {
+	    	width: 260px;
+	    	margin-bottom: 0;
+	    }
+	    &:last-child {
+	    	margin-right: 0;
+	    }
+	    &:hover {
+	    	.link-text {
+	    		opacity: 1;
+	    	}
+	    	.image {
+	    		opacity: 0.1;
+	    	}
+	    }
+	    .link-text {
+		    width: 100%;
+		    height: 163px;
+		    position: absolute;
+		    top: 0;
+		    opacity: 0;
+		    transition: opacity 0.25s linear;
+		    @include breakpoint(large) {
+		    	width: 260px;
+		    }
+				a {
+			    position: absolute;
+			    top: 34%;
+			    left: 29.5%;
+			    @include breakpoint(medium) {
+			    	left: 33.75%;
+			    }
+			    @include breakpoint(large) {
+			    	left: 22.5%;
+			    }
+			    @include yellow-button;
+			    &:hover {
+						text-decoration: none;
+			    }
+				}
+			}
+			.image {
+		    width: 100%;
+		    height: 163px;
+		    transition: opacity 0.25s linear;
+		    @include breakpoint(large) {
+		    	width: 260px;
+		    }
+			}
+		}
+	}
+	.view-all {
+		text-align: center;
+		padding: 25px 0;
+		a {
+			font-family: "Roboto", sans-serif;
+			color: $text-blue;
+		}
+	}
+}
+
+.webparts-wrapper {
+	background: $light-grey;
+	padding: 50px 0;
+	margin: 0 0 40px;
+	.help-wrapper,
+	.properties-wrapper,
+	.news-wrapper {
+		margin-bottom: 25px;
+		@include breakpoint(medium) {
+			margin-bottom: 0;
+		}
+	}
+	.webpart-title {
+		font-family: "Roboto", sans-serif;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 32px;
+		border-bottom: 4px solid $purple-blue;
+		margin-bottom: 20px;
+		a {
+			font-size: 11px;
+			float: right;
+			padding-right: 10px;
+			color: $text-blue;
+			line-height: 41px;
+			&:hover {
+				@include link-hover;
+			}
+		}
+	}
+	.title {
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 26px;
+		color: $text-blue;
+		margin-bottom: 10px;
+	}
+	.description,
+	.FeaturedProperty_Description {
+		font-family: "Roboto", sans-serif;
+		font-size: 13px;
+		line-height: 1.5;
+		color: #666666;
+	}
+	a.link {
+		font-family: "Roboto", sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $text-blue;
+		display: inline-block;
+		margin-top: 15px;
+		&:hover {
+			@include link-hover;
+		}
+	}
+	.FeaturedProperty_Title {
+		font-family: "Roboto", sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 1.5;
+		color: $purple-blue;
+	}
+	.FeaturedProperty_DetailsLink,
+	.FeaturedProperty_SearchLink {
+    display: none;
+	}
+	#featured-properties-wrapper {
+		.property {
+			overflow: hidden;
+			margin-bottom: 20px;
+			.image {
+				float: left;
+				width: 80px;
+				img {
+					width: 100%;
+				}
+			}
+			.copy {
+				float: left;
+				width: 170px;
+				margin: 0 15px;
+				font-family: "Roboto", sans-serif;
+				font-size: 13px;
+				.title a {
+					font-weight: bold;
+					color: $purple-blue;
+					text-decoration: none;
+					font-size: 13px;
+					line-height: 15px;
+					margin-bottom: 2px;
+					&:hover {
+						color: #001d43;
+					}
+				}
+			}
+		}
+	}
+	.news-wrapper {
+		.news-inner-wrapper {
+			.date {
+				font-family: "Roboto", sans-serif;
+				font-size: 13px;
+				line-height: 1.5;
+				color: #666666;
+			}
+			.title a {
+				color: $text-blue;
+				font-size: 13px;
+				line-height: 1.5;
+				&:hover {
+					@include link-hover;
+				}
+			}
+		}
+	}
+}
+
+.connect-with-us-wrapper {
+	position: relative;
+	margin: auto;
+	max-width: 1400px;
+	#staff-repeater {
+		z-index: 6;
+		margin: 0 25px;
+		.staff {
+			.left-wrapper {
+				float: left;
+				font-family: "Roboto", sans-serif;
+				width: 65%;
+				@include breakpoint(small) {
+					width: auto;
+				}
+				.image {
+					img {
+						max-width: 100%;
+					}
+				}
+				.name {
+					font-size: 17px;
+					font-weight: 700;
+					color: $text-purple;
+				}
+				.title {
+					font-size: 14px;
+					font-weight: normal;
+					color: $text-blue;
+				}
+				.email a {
+					font-size: 13px;
+					color: $dark-grey;
+					text-decoration: none;
+					&:hover {
+						color: $text-blue;
+					}
+				}
+			}
+			.right-wrapper {
+				float: left;
+				ul.staff-social-media {
+					list-style: none;
+					padding: 25px 0 0 40px;
+					@include breakpoint(small) {
+						padding: 25px 22px 0 28px;
+					}
+					@include breakpoint(large) {
+						padding: 25px 60px 0;
+					}
+					li {
+						padding: 0 0 30px;
+						position: relative;
+						text-align: center;
+						&last-child {
+							padding: 0;
+						} 
+						a {
+							color: #D3D3D3;
+							font-size: 32px;
+							&:hover {
+								color: $text-blue;
+							}
+						}
+						i.fa.fa-phone {
+							font-size: 32px;
+							color: #D3D3D3;
+						}
+						.tooltip {
+							transition: opacity 0.25s linear;
+							font-family: "Roboto", sans-serif;
+							color: #fff;
+							font-size: 14px;
+							padding: 15px;
+							width: 110px;
+							background: rgba(83,135,212,0.75);
+							z-index: 9999999999;
+							left: -119%;
+							top: 70%;
+							border-radius: 12px;
+							&:before {
+								content: "";
+								border-left: 5px solid transparent;
+								border-right: 5px solid transparent;
+								border-bottom: 5px solid rgba(83,135,212,0.75);
+								position: absolute;
+								bottom: 100%;
+								left: 44%;
+							}
+						}
+						&:hover {
+							.tooltip {
+								opacity: 1;
+							}
+							i.fa.fa-phone {
+								color: $text-blue;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.owl-controls {
+		position: absolute; 
+		height: 116px; 
+		left: 0; 
+		top: 50%; 
+		width: 100%;
+		z-index: 5;
+		.owl-btn { 
+			width: 37px; 
+			height: 116px; 
+			bottom: 50%; 
+			background: #dbdbdb; 
+			position: absolute; 
+			z-index: 100; 
+			cursor: pointer; 
+			-webkit-transition: background 200ms linear; 
+			-moz-transition: background 200ms linear; 
+			-o-transition: background 200ms linear; 
+			transition: background 200ms linear; 
+			&:hover {
+				background: $purple-blue;
+			}
+			.arrow {
+				border-top: 15px solid transparent; 
+				border-bottom: 15px solid transparent; 
+				position: absolute; 
+				top: 42px; 
+				left: 11px;
+			}
+		}
+		.owl-btn.left {
+			left: 0;
+			.arrow {
+				border-right: 15px solid #fff;
+			}
+		}
+		.owl-btn.right {
+			right: 0;
+			.arrow {
+				border-left: 15px solid #fff;
+			}
+		}
+	}
+	.slick-dots {
+		li {
+			height: 30px;
+			width: 30px;
+			button {
+				height: 30px;
+				width: 30px;
+				&:before {
+					height: 30px;
+					width: 30px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}
+
+.connect-social-wrapper {
+	background: $darkest-purple;
+	margin-top: 40px;
+	padding: 15px 0;
+	@include breakpoint(small) {
+		height: 70px;
+		padding: 0;
+	}
+	.text {
+		font-family: "PT Sans", sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 18px;
+		color: #ffffff;
+		text-align: center;
+		margin-bottom: 10px;
+		@include breakpoint(small) {
+			margin-bottom: 0;
+			line-height: 70px;
+			text-align: left;
+		}
+		@include breakpoint(medium) {
+			font-size: 21px;
+		}
+	}
+	ul.social-icons {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 132px;
+		display: none;
+		@include breakpoint(small) {
+			float: right;
+			width: auto;
+			margin: 0;
+		}
+		li {
+			float: left;
+			margin-right: 30px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: #D3D3D3;
+				font-size: 28px;
+				display: inherit;
+				line-height: 40px;
+				@include breakpoint(small) {
+					line-height: 70px;
+				}
+				&:hover {
+					color: #538ad2;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+/* COLORS */
+$utility-blue: #022254;
+$purple-blue: #5387D4;
+$yellow: #FFC200;
+$light-yellow: #fbc85c;
+$dark-purple: #011E4E;
+$darker-purple: #011B44;
+$darkest-purple: #00132F;
+$text-purple: #001b3e;
+$text-blue: #538ad2;
+$dark-grey: #333333;
+$grey: #D1D1D1;
+$light-grey: #EFEFEF;
+$black: #170900;
+$border-grey: #BEBEBE;
+
+/* MIXINS */
+@mixin yellow-button() {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #170900;
+  background: $yellow;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid $yellow;
+}
+
+@mixin yellow-button-hover() {
+  background: #ffffff;
+  border: 1px solid #666666;
+  text-decoration: none;
+}
+
+@mixin button($border-color,$bg-color,$text-color) {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: $text-color;
+  background: $bg-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+}
+
+@mixin button-hover($bg-color,$border-color) {
+  background: $bg-color;
+  border: 1px solid $bg-color;
+  text-decoration: none;
+}
+
+@mixin link-hover() {
+  color: #001d43;
+  text-decoration: none;
+}
+
+/* Breakpoint Mixins */
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px) { @content; }
+  }
+}
+
+/* fonts */
+/*
+
+font-family: "Roboto", sans-serif;
+light (300)
+regular (400)
+medium (500)
+
+font-family: "Roboto Condensed", sans-serif;
+condensed
+bold condensed
+
+font-family:"Rockwell W01", serif;
+rockwell:
+regular
+
+font-family: "PT Sans", sans-serif;
+regular
+bold (700)
+
+*/
+
+
+/* linked stylesheets */
+
+@import 'master';
+@import 'home';
+@import 'secondary';
+@import 'media';
+@import 'contact';
+
+/*# sourceMappingURL=main.css.map */
