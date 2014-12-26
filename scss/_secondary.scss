@@ -10,16 +10,16 @@
 			position: relative;
 			min-width: 725px;
 		}
-	}
-	.section-header {
-		position: absolute;
-		color: #ffffff;
-		top: 25%;
-		font-size: 38px;
-		z-index: 10;
-		@include breakpoint(medium) {
-			top: 40%;
-			font-size: 44px;
+		.section-header {
+			position: absolute;
+			color: #ffffff;
+			top: 25%;
+			font-size: 38px;
+			z-index: 10;
+			@include breakpoint(medium) {
+				top: 40%;
+				font-size: 44px;
+			}
 		}
 	}
 	.dots-overlay {
@@ -135,17 +135,17 @@
 					margin-left: -1px;
 					&.Active {
 						background-color: $purple-blue; 
-						color: #FFFFFF;
+						color: #fff;
 					}
 					&:hover {
-						color:#ffffff; 
+						color:#fff; 
 						background-color: $purple-blue;
 						text-decoration: none;
 					}
 				}
 				&.HighLighted a {
 					background-color: $purple-blue; 
-					color: #FFFFFF;
+					color: #fff;
 					display: inline-block;
 					white-space: nowrap;
 				}
@@ -168,6 +168,7 @@
 						a {
 							background: transparent;
 							border: 0;
+							color: #fff;
 							&:hover {
 								background: #4773B5;
 							}
@@ -307,14 +308,17 @@
 				ul {
 			    list-style: none;
 			    padding: 0;
+			    li {
+				    margin-bottom: 3px;
+					}
 				}
 				.SidebarListMyFavorites {
 				    float: right;
-				    clear: right;  cursor: pointer;
+				    clear: right;  
+				    cursor: pointer;
 				    img {
 							position: relative;
-							right: -15px;
-							top: -2px;
+							top: -1px;
 				    }
 				}
 				.SidebarListIcon {
@@ -344,8 +348,13 @@
 				margin-left: 5px;
 			}
 			.Photo {
-				width: auto;
+				float: left;
 				height: auto;
+				width: 50%;
+			}
+			.staff-text {
+		    float: right;
+		    width: 45%;
 			}
 			.FirstName {
 				font-family: "Roboto", sans-serif;

@@ -124,6 +124,7 @@
 			outline: 0;
 			padding: 5px 10px;
 		}
+		.TextAreaField,
 		.contact-name input,
 		.contact-title input,
 		.contact-company input,
@@ -159,17 +160,16 @@
 			margin-top: 0;
 		}
 		.section-header {
-			position: static;
 			color: $dark-grey;
 			margin-bottom: 30px;
 		}
 	}
 	.map-title-wrapper {
-    height: 130px;
     padding: 50px 0 40px;
     .section-header {
     color: #333333;
     font-size: 34px;
+    margin-bottom: 0;
 		}
 	}
 }
