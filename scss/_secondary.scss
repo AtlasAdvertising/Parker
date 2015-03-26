@@ -2,6 +2,13 @@
 .secondary-wrapper {
 	padding-bottom: 75px;
 	min-height: 500px;
+	a {
+		color: #538ad2;
+		&:hover {
+		  color: #001d43;
+		  text-decoration: none;
+		}
+	}
 	.secondary-header-wrapper {
 		position: relative;
 		img {
